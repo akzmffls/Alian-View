@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     var counter = 1
     var mom = true
+    var myTimer = Timer()
 
     @IBOutlet var alienImgeView: UIImageView!
     @IBOutlet weak var lbl: UILabel!
@@ -25,7 +26,13 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func play(_ sender: Any) {
+        myTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateImage), userInfo: nil, repeats: true)
+    }
     
+    @IBAction func stop(_ sender: Any) {
+        myTimer.invalidate()
+    }
     
 
     @IBAction func updateImage(_ sender: Any) {
