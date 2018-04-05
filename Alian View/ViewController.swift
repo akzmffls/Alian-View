@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var counter = 1
     var mom = true
     var myTimer = Timer()
+    var isAnimating = false
 
     @IBOutlet var alienImgeView: UIImageView!
     @IBOutlet weak var lbl: UILabel!
@@ -34,7 +35,18 @@ class ViewController: UIViewController {
         myTimer.invalidate()
     }
     
-
+    @IBAction func PnS(_ sender: Any) {
+        if isAnimating == false{
+            myTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateImage), userInfo: nil, repeats: true)
+            isAnimating = true
+        } else {
+            myTimer.invalidate()
+            isAnimating = false
+        }
+        
+        
+    }
+    
     @IBAction func updateImage(_ sender: Any) {
         
         if counter == 1 {

@@ -37,6 +37,14 @@
                                     <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3nt-81-ixX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONc-gE-B9Q">
+                                <rect key="frame" x="149" y="486" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="play / stop"/>
+                                <connections>
+                                    <action selector="PnS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4eb-7E-Y1D"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmi-CI-TEP">
                                 <rect key="frame" x="67" y="395" width="52" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
